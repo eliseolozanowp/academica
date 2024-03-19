@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Productos</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css">
+</head>
+<body>
+    <div class="container-fluid" id="app">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand">::.. SISTEMA DE FACTURACION ..::</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <!-- <a class="nav-link" @click="abrirFormulario('categoria')">Categoría</a> -->
+                        <!-- <a class="nav-link" @click="abrirFormulario('producto')">Productos</a> -->
+                        <a class="nav-link" @click="abrirFormulario('inscripcion')">Inscripción</a>
+                        <a class="nav-link" @click="abrirFormulario('matricula')">Matricula</a>
+                        <a class="nav-link" @click="abrirFormulario('materia')">Materias</a> <!-- Nuevo enlace para Materias -->
+                        <a class="nav-link" @click="abrirFormulario('alumno')">Alumnos</a> <!-- Nuevo enlace para Materias -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="appSistema">
+            <!-- <componente-categorias ref="categoria" v-show="forms['categoria'].mostrar"></componente-categorias> -->
+            <!-- <componente-productos ref="producto" v-show="forms['producto'].mostrar"></componente-productos> -->
+            <componente-inscripciones ref="inscripcion" v-show="forms['inscripcion'].mostrar"></componente-inscripciones>
+            <componente-matriculas ref="matricula" v-show="forms['matricula'].mostrar"></componente-matriculas>
+            <componente-materias ref="materia" v-show="forms['materia'].mostrar"></componente-materias> <!-- Componente para Materias -->
+            <componente-alumnos ref="alumno" v-show="forms['alumno'].mostrar"></componente-alumnos> <!-- Componente para Materias -->
+        </div>
+    </div>
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-select@3.0.0"></script>
+    <script src="db.js"></script>
+    <script src="imagenes.js"></script>
+    <!-- <script src="categorias.js"></script> -->
+    <!-- <script src="productos.js"></script> -->
+    <script src="inscripciones.js"></script>
+    <script src="matriculas.js"></script>
+    <script src="materias.js"></script> <!-- Importa el script de Materias -->
+    <script src="alumnos.js"></script> <!-- Importa el script de Materias -->
+    <script src="main.js"></script>
+</body>
+</html>
